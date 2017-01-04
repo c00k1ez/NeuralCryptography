@@ -7,9 +7,9 @@ namespace NeuroNetTest
 	class MainClass
 	{
 		//private int CountOfInput = 6;
-		private static int CountOfHiddenNeirons = 15;
-		private static int Range = 50;
-		private static int CountOfInputsInOneNeuron = 10;
+		private static int CountOfHiddenNeirons = 3;
+		private static int Range = 20;
+		private static int CountOfInputsInOneNeuron = 4;
 
 		public static void Main (string[] args)
 		{

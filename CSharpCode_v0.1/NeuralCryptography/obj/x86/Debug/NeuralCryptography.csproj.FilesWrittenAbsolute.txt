@@ -1,0 +1,5 @@
+/home/crazy/NeuralCryptography/CSharpCode_v0.1/NeuralCryptography/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/crazy/NeuralCryptography/CSharpCode_v0.1/NeuralCryptography/bin/Debug/NeuralCryptography.exe.mdb
+/home/crazy/NeuralCryptography/CSharpCode_v0.1/NeuralCryptography/bin/Debug/NeuralCryptography.exe
+/home/crazy/NeuralCryptography/CSharpCode_v0.1/NeuralCryptography/obj/x86/Debug/NeuralCryptography.exe
+/home/crazy/NeuralCryptography/CSharpCode_v0.1/NeuralCryptography/obj/x86/Debug/NeuralCryptography.exe.mdb
