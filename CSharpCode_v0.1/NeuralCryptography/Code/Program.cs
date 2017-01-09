@@ -17,7 +17,7 @@ namespace NeuroNetTest
 
 			while (true)
 			{
-				Console.Write ("-------------------------------------------------------------------------\nWelkome to first test of passive MITM attack in neural cryptography algorithm.\n Do you want to input start parameters?\n[y/n/q] ");
+				Console.Write ("-------------------------------------------------------------------------\nWelсome to the first test of passive MITM attack in neural cryptography algorithm.\n Do you want to input start parameters?\n[y/n/q] ");
 				char foo = Convert.ToChar (Console.ReadLine ());
 				var FirstAtack = new TestEveAtack ();
 				switch (foo) {
