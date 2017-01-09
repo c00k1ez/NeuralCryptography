@@ -23,6 +23,27 @@ namespace NeuroNetTest
 
 		}
 
+		public TestEveAtack ()
+		{
+
+			this.CountOfInputsInOneNeuron = 0;
+			this.CountOfHiddenNeirons = 0;
+			this.Range = 0;
+			this.IsDebugOn = true;
+
+		}
+
+		public void GetInitData (int CountOfInputsInOneNeuron, int CountOfHiddenNeirons, int Range, bool IsDebugOn)
+		{
+
+			this.CountOfInputsInOneNeuron = CountOfInputsInOneNeuron;
+			this.CountOfHiddenNeirons = CountOfHiddenNeirons;
+			this.Range = Range;
+			this.IsDebugOn = IsDebugOn;
+			Start ();
+
+		}
+
 		private void Start ()
 		{
 
