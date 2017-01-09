@@ -24,7 +24,6 @@ namespace NeuroNetTest
 				case 'n':
 					FirstAtack.GetInitData (4, 3, 20, false);
 					continue;
-					break;
 
 				case 'y':
 					try {
@@ -36,6 +35,16 @@ namespace NeuroNetTest
 
 						Console.Write ("Range of key values: ");
 						Range = Convert.ToInt32 (Console.ReadLine ());
+
+						Console.Write ("Is debug-mod On? [true/fasle]: ");
+						string bar = Console.ReadLine ();
+						if (bar != "true" && bar != "false")
+							throw new Exception ("invalid arg!");
+						else if (bar == "true")
+							IsDebugOn = Convert.ToBoolean (1);
+							else
+							IsDebugOn = Convert.ToBoolean (0);
+
 						if (Range <= 0 || CountOfHiddenNeirons <= 0 || CountOfInputsInOneNeuron <= 0)
 							throw new Exception ("invalid arg!");
 						FirstAtack.GetInitData (CountOfInputsInOneNeuron, CountOfHiddenNeirons, Range, IsDebugOn);
@@ -44,15 +53,12 @@ namespace NeuroNetTest
 						break;
 					}
 					continue;
-					break;
 
 				case 'q':
 					return;
-					break;
 				default:
 					Console.WriteLine ("error!");
 					continue;
-					break;
 				}
 					
 			}
