@@ -1,0 +1,5 @@
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NCWithGUI\bin\Debug\NCWithGUI.exe
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NCWithGUI\bin\Debug\NCWithGUI.pdb
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NCWithGUI\obj\x86\Debug\NCWithGUI.csprojResolveAssemblyReference.cache
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NCWithGUI\obj\x86\Debug\NCWithGUI.exe
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NCWithGUI\obj\x86\Debug\NCWithGUI.pdb

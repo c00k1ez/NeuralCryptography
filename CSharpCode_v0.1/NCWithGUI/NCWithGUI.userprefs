@@ -1,8 +1,9 @@
-﻿<Properties StartupItem="NeuralCryptography.csproj">
+﻿<Properties StartupItem="NCWithGUI.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Code\Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainWindow.cs">
     <Files>
-      <File FileName="Code\Program.cs" Line="4" Column="1" />
+      <File FileName="Program.cs" Line="15" Column="3" />
+      <File FileName="MainWindow.cs" Line="14" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

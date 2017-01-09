@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="NCLib.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Code\Package.cs">
+    <Files>
+      <File FileName="Code\StartKeyGeneration.cs" Line="3" Column="16" />
+      <File FileName="Code\TPM.cs" Line="8" Column="16" />
+      <File FileName="Code\Rand.cs" Line="5" Column="16" />
+      <File FileName="Code\Package.cs" Line="3" Column="16" />
+      <File FileName="Code\Bob.cs" Line="4" Column="16" />
+      <File FileName="Code\Alice.cs" Line="4" Column="16" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

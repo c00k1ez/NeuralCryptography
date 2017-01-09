@@ -1,0 +1,23 @@
+﻿using System;
+
+namespace NCLib
+{
+	public struct Package
+	{
+
+		public readonly string MDKey;
+		public readonly int Output;
+
+		public Package (string Hash, int Output)
+		{
+
+			this.MDKey = Hash;
+			this.Output = Output;
+
+		}
+
+
+
+	}
+
+}
