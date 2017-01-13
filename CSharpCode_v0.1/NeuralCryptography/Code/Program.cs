@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace NeuroNetTest
 {
@@ -8,12 +9,14 @@ namespace NeuroNetTest
 	{
 		
 		private static int CountOfHiddenNeirons = 3;
-		private static int Range = 20;
-		private static int CountOfInputsInOneNeuron = 4;
+		private static int Range = 5;
+		private static int CountOfInputsInOneNeuron = 5;
 		private static bool IsDebugOn = false;
+		private static  bool IsAttackSuccess = false;
 
 		public static void Main (string[] args)
 		{
+
 
 			while (true)
 			{
@@ -22,7 +25,7 @@ namespace NeuroNetTest
 				var FirstAtack = new TestEveAtack ();
 				switch (foo) {
 				case 'n':
-					FirstAtack.GetInitData (4, 3, 20, false);
+					FirstAtack.GetInitData (4, 3, 20, false, ref IsAttackSuccess);
 					continue;
 
 				case 'y':
@@ -44,10 +47,10 @@ namespace NeuroNetTest
 							IsDebugOn = Convert.ToBoolean (1);
 							else
 							IsDebugOn = Convert.ToBoolean (0);
-
+	
 						if (Range <= 0 || CountOfHiddenNeirons <= 0 || CountOfInputsInOneNeuron <= 0)
 							throw new Exception ("invalid arg!");
-						FirstAtack.GetInitData (CountOfInputsInOneNeuron, CountOfHiddenNeirons, Range, IsDebugOn);
+						FirstAtack.GetInitData (CountOfInputsInOneNeuron, CountOfHiddenNeirons, Range, IsDebugOn, ref IsAttackSuccess);
 					} catch (Exception e) {
 						Console.WriteLine (e.Message);
 						break;

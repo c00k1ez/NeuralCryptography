@@ -11,8 +11,9 @@ namespace NeuroNetTest
 		private int Range;
 		private bool IsDebugOn;
 		private int CountOfInputsInOneNeuron;
+		private bool IsAttackSuccess;
 
-		public TestEveAtack ( int CountOfInputsInOneNeuron, int CountOfHiddenNeirons, int Range, bool IsDebugOn)
+		public TestEveAtack ( int CountOfInputsInOneNeuron, int CountOfHiddenNeirons, int Range, bool IsDebugOn, ref bool IsAttackSuccess)
 		{
 
 			this.CountOfInputsInOneNeuron = CountOfInputsInOneNeuron;
@@ -20,6 +21,7 @@ namespace NeuroNetTest
 			this.Range = Range;
 			this.IsDebugOn = IsDebugOn;
 			Start ();
+			IsAttackSuccess = this.IsAttackSuccess;
 
 		}
 
@@ -33,7 +35,7 @@ namespace NeuroNetTest
 
 		}
 
-		public void GetInitData (int CountOfInputsInOneNeuron, int CountOfHiddenNeirons, int Range, bool IsDebugOn)
+		public void GetInitData (int CountOfInputsInOneNeuron, int CountOfHiddenNeirons, int Range, bool IsDebugOn, ref bool IsAttackSuccess)
 		{
 
 			this.CountOfInputsInOneNeuron = CountOfInputsInOneNeuron;
@@ -41,6 +43,7 @@ namespace NeuroNetTest
 			this.Range = Range;
 			this.IsDebugOn = IsDebugOn;
 			Start ();
+			IsAttackSuccess = this.IsAttackSuccess;
 
 		}
 
@@ -84,10 +87,11 @@ namespace NeuroNetTest
 				alice.CorrectAliceWeights (ref AliceCheck);
 				//eve.CorrectBobWeights (ref EveCheck);//!!
 				if ((AliceCheck == true) || (BobCheck == true)) {
-					alice.OutputData ();
-					bob.OutputData ();
-					eve.OutputData ();
-					Console.WriteLine (i);
+					//alice.OutputData ();
+					//bob.OutputData ();
+					//eve.OutputData ();
+					//Console.WriteLine (i);
+					IsAttackSuccess = EveCheck;
 					break;
 				}
 				if (IsDebugOn) {
