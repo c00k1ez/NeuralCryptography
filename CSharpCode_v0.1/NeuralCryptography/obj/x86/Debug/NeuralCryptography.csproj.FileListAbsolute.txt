@@ -1,0 +1,5 @@
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NeuralCryptography\obj\x86\Debug\NeuralCryptography.csprojResolveAssemblyReference.cache
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NeuralCryptography\obj\x86\Debug\NeuralCryptography.exe
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NeuralCryptography\bin\Debug\NeuralCryptography.exe
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NeuralCryptography\bin\Debug\NeuralCryptography.pdb
+C:\Users\And\Desktop\NeuralCryptography\CSharpCode_v0.1\NeuralCryptography\obj\x86\Debug\NeuralCryptography.pdb

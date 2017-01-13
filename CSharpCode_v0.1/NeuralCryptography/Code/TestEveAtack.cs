@@ -87,11 +87,12 @@ namespace NeuroNetTest
 				alice.CorrectAliceWeights (ref AliceCheck);
 				//eve.CorrectBobWeights (ref EveCheck);//!!
 				if ((AliceCheck == true) || (BobCheck == true)) {
-					//alice.OutputData ();
-					//bob.OutputData ();
-					//eve.OutputData ();
-					//Console.WriteLine (i);
+					alice.OutputData ();
+					bob.OutputData ();
+					eve.OutputData ();
+					Console.WriteLine (i);
 					IsAttackSuccess = EveCheck;
+					Console.WriteLine ("Numder of iterations= " + i);
 					break;
 				}
 				if (IsDebugOn) {
