@@ -1,6 +1,18 @@
 ﻿<Properties StartupItem="NeuralCryptography.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Code/Alice.cs">
+    <Files>
+      <File FileName="Code/Alice.cs" Line="104" Column="28" />
+      <File FileName="Code/Bob.cs" Line="1" Column="1" />
+      <File FileName="Code/Eve.cs" Line="1" Column="1" />
+      <File FileName="Code/Neurons.cs" Line="1" Column="1" />
+      <File FileName="Code/Package.cs" Line="1" Column="1" />
+      <File FileName="Code/Program.cs" Line="1" Column="1" />
+      <File FileName="Code/Rand.cs" Line="1" Column="1" />
+      <File FileName="Code/TestEveAtack.cs" Line="1" Column="1" />
+      <File FileName="Code/TPM.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

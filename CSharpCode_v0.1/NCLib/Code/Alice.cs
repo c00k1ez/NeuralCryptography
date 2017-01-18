@@ -10,25 +10,65 @@ namespace NCLib
 	public class Alice
 	{
 
-		private int CountOfInputNeirons;
+		/// <summary>
+		/// Количество скрытых нейронов.
+		/// </summary>
 		private int CountOfHiddenNeirons;
+		/// <summary>
+		/// Диапозон значений ключа
+		/// </summary>
 		private int Range;
+		/// <summary>
+		/// Входной вектор. Используется для временного хранения входных значений.
+		/// </summary>
 		private List<int> InputVector = new List<int> ();
+		/// <summary>
+		/// Полные входные данные на i-том кругу обучения.
+		/// </summary>
 		private List< List<int> > AllInputData = new List< List<int> > ();
+		/// <summary>
+		/// Древовидная машина четности абонента.
+		/// </summary>
 		private TPM AliceTPM = new TPM ();
+		/// <summary>
+		/// Значения ключа.
+		/// </summary>
 		private List<int> Key = new List<int> ();
+		/// <summary>
+		/// Значение хэш-функции этого абонента.
+		/// </summary>
 		private string AliceHash = string.Empty;
+		/// <summary>
+		/// Значение хэш-функции воторого абонента.
+		/// </summary>
 		private string BobHash = string.Empty;
+		/// <summary>
+		/// Выходное значение древовидной машины четности Алисы.
+		/// </summary>
 		private int AliceTeta;
+		/// <summary>
+		/// Выходное значение древовидной машины четности Боба.
+		/// </summary>
 		private int BobTeta;
+		/// <summary>
+		/// Кол-во входных нейронов, соответствующее одному выходному.
+		/// </summary>
 		private int CountOfInputsInOneNeuron;
-
+		/// <summary>
+		/// Флаг проверки активации дебаг-мода.
+		/// </summary>
 		private bool IsDebugOn = false;
 
+		/// <summary>
+		/// Конструктор <see cref="NeuroNetTest.Alice"/> класса.
+		/// </summary>
+		/// <param name="CountOfInputsInOneNeuron">Кол-во входных нейронов, соответствующее одному выходному.</param>
+		/// <param name="CountOfHiddenNeirons">Количество скрытых нейронов.</param>
+		/// <param name="Range">Диапозон значений ключа.</param>
 		public Alice (int CountOfInputsInOneNeuron, int CountOfHiddenNeirons, int Range)
 		{
 
-			this.CountOfInputNeirons = CountOfHiddenNeirons * CountOfInputsInOneNeuron;
+
 			this.CountOfInputsInOneNeuron = CountOfInputsInOneNeuron;
 			this.CountOfHiddenNeirons = CountOfHiddenNeirons;
 			this.Range = Range;
@@ -36,6 +76,10 @@ namespace NCLib
 
 		}
 
+		/// <summary>
+		/// Метод для генерации обучающей выборки. 
+		/// </summary>
+		/// <param name="_InputVector">Матрица входной выборки.</param>
 		public void GenerateInputVector ( ref List< List<int> > _InputVector)
 		{
 
@@ -50,16 +94,21 @@ namespace NCLib
 
 		}
 
+		/// <summary>
+		/// Нахождение выходного значения древовидной машины четности на уровне Алисы.
+		/// </summary>
 		public void AliceOutput ()
 		{
 
 			AliceTPM.GetInput (AllInputData);
-			//Console.WriteLine (AllInputData.Count);
 			AliceTeta = AliceTPM.Teta ();
 			GetKeyFromTPM ();
 
 		}
 
+		/// <summary>
+		/// Метод для вывода данных.
+		/// </summary>
 		public void OutputData ()
 		{
 
@@ -69,6 +118,10 @@ namespace NCLib
 
 		}
 
+		/// <summary>
+		/// Метод для приема пакета из канала.
+		/// </summary>
+		/// <param name="Pack">Пакет</param>
 		public void GetPackage (ref Package Pack)
 		{
 
@@ -77,6 +130,10 @@ namespace NCLib
 
 		}
 
+		/// <summary>
+		/// Метод для корректировки весов по измененному правилу Хэбба.
+		/// </summary>
+		/// <param name="IsHasesEqual">Параметр для подтверждения равенства хэшей.</param>
 		public void CorrectAliceWeights (ref bool IsHasesEqual)
 		{
 
@@ -91,13 +148,14 @@ namespace NCLib
 			} else {
 				IsHasesEqual = false;
 				if (AliceTeta == BobTeta)
-					//	AliceTPM.CorrectWeights ();
-					//else
 					AliceTPM.CorrectWeights (BobTeta);
 			}
 
 		}
 
+		/// <summary>
+		/// Получение ключа из древовидной машины четности.
+		/// </summary>
 		private void GetKeyFromTPM ()
 		{
 
@@ -105,6 +163,10 @@ namespace NCLib
 
 		}
 
+		/// <summary>
+		/// Метод для отправки пакета.
+		/// </summary>
+		/// <param name="Pack">Пакет</param>
 		public void SetPackage (ref Package Pack)
 		{
 
